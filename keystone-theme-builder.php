@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 }
 
 //Set plugin version constant.
-define('STONEX_VERSION', '1.0.1');
+define('STONEX_VERSION', '1.0.0');
 /* Set constant path to the plugin directory. */
 define('STONEX_WIDGET', trailingslashit(plugin_dir_path(__FILE__)));
 // Plugin Function Folder Path
