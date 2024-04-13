@@ -1,0 +1,3512 @@
+/*--------------------------------------------------------------============================================================
+/*==============================
+[Table of contents]
+
+WIDGET STYLESHEET
+----------------------------------
+MENU MODAL POPUP
+ICON BOX
+CSS TRANSFORM
+BREADCRUMB
+CONTACT FORM 7
+VIDEO BUTTON
+DUAL HEADING
+ANIMATED TEXT
+PRICING BOX
+PRICING TABLE WITH SWICHER
+PROGRESS BAR
+ACCORDION
+SEARCH
+TESTIMONIAL
+TAB
+TEAM MEMBER
+TOP RIGHT META
+
+=============================================================--------------------------------------------------------------*/
+
+
+
+@media only screen and (min-width: 1350px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+      max-width: 1316px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+      max-width: 768px !important;
+    }
+  
+    .elementor-lightbox .elementor-video-container {
+      width: 75% !important;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+      max-width: 390px !important;
+    }
+  
+    .elementor-lightbox .elementor-video-container {
+      width: 90% !important;
+    }
+  }
+  
+  .elementor-custom-embed-image-overlay img {
+    object-fit: cover;
+  }
+  
+  .elementor-element {
+    --widgets-spacing: 0px !important;
+  }
+  
+  .elementor-widget:not(:last-child) {
+    margin-bottom: 0px !important;
+  }
+  
+  #colophon {
+    background-color: initial;
+  }
+  
+  .elementor-custom-embed-play svg {
+    filter: none;
+  }
+  
+  .elementor-custom-embed-play i {
+    text-shadow: none;
+  }
+  
+  /*---------------------------------------------------
+  MENU MODAL POPUP
+  ----------------------------------------------------*/
+  .stonex-addons-title:after {
+    content: "";
+    position: absolute;
+  }
+  
+  span.popup-menubar {
+    cursor: pointer;
+    display: inline-block;
+    padding: 14px 20px;
+    background-color: #222;
+    color: #fff;
+    border-radius: 3px;
+  }
+  
+  span.popup-menubar i {
+    font-size: 30px;
+  }
+  
+  .stonex-addons-popup-content {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    z-index: 9999999;
+    opacity: 0;
+    visibility: hidden;
+    left: -30%;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    background-color: var(--accent-color);
+    -webkit-box-shadow: 0 13px 35px -12px rgb(35 35 35 / 15%);
+    box-shadow: 0 13px 35px -12px rgb(35 35 35 / 15%);
+  }
+  
+  
+  .stonex-addons-popup-content.show {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+  }
+  
+  .stonex-addons-popup-content #offset-menu-close-btn {
+    position: fixed;
+    left: 30px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    z-index: 9;
+    top: 40px;
+  }
+  
+  /*---------------------------------------------------
+  ICON BOX
+  ----------------------------------------------------*/
+  .elementor-icon-list-icon {
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .stonex-addons-feature-box-item .stonex-addons-feature-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stonex-addons-feature-box-item {
+    padding: 30px;
+    border-radius: 3px;
+    transition: 0.4s;
+  }
+  
+  .stonex-addons-feature-box-item .icon-background-yes .stonex-addons-feature-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    background-color: var(--accent-color);
+    border-radius: 0px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stonex-addons-feature-box-item .icon-background-yes .stonex-addons-feature-icon svg {
+    width: 35px;
+  }
+  
+  span.stonex-addons-feature-icon.icon-type-image img {
+    object-fit: cover;
+  }
+  
+  .stonex-addons-feature-icon-wrap {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .stonex-addons-feature-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #02021E;
+  }
+  
+  .stonex-addons-feature-content p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #617686;
+    margin-bottom: 0px;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-icon-position-left {
+    display: inline-flex;
+    text-align: right;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-icon-position-right {
+    display: flex;
+    text-align: left;
+    flex-direction: row-reverse;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-feature-icon-center {
+    text-align: center;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-feature-icon-left {
+    text-align: right;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-feature-icon-left .stonex-addons-feature-icon-wrap {
+    justify-content: flex-start;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-feature-icon-right .stonex-addons-feature-icon-wrap {
+    justify-content: flex-end;
+  }
+  
+  .stonex-addons-feature-box-item.stonex-addons-feature-icon-right {
+    text-align: left;
+  }
+  
+  .stonex-addons-feature-icon-wrap i,
+  .stonex-addons-feature-icon-wrap svg,
+  .stonex-addons-feature-icon {
+    transition: 0.3s ease-in-out;
+  }
+  
+  .stonex-addons-feature-box-item .icon-background-no .stonex-addons-feature-icon svg {
+    max-height: 118px;
+  }
+  
+  .stonex-addons-feature-box-item .stonex-addons-feature-icon i {
+    font-size: 25px;
+  }
+  
+  .stonex-addons-feature-box-number {
+    font-size: 22px;
+    letter-spacing: -0.73px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .stonex-addons-feature-box-number span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  
+  /*---------------------------------------------------
+  CSS TRANSFORM
+  ----------------------------------------------------*/
+  .stonex-css-transform-yes {
+    -webkit-transition-duration: var(--stonex-tfx-transition-duration, 0.2s);
+    transition-duration: var(--stonex-tfx-transition-duration, 0.2s);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transform: translate(var(--stonex-tfx-translate-x, 0),
+        var(--stonex-tfx-translate-y, 0)) scale(var(--stonex-tfx-scale-x, 1), var(--stonex-tfx-scale-y, 1)) skew(var(--stonex-tfx-skew-x, 0), var(--stonex-tfx-skew-y, 0)) rotateX(var(--stonex-tfx-rotate-x, 0)) rotateY(var(--stonex-tfx-rotate-y, 0)) rotateZ(var(--stonex-tfx-rotate-z, 0));
+    transform: translate(var(--stonex-tfx-translate-x, 0),
+        var(--stonex-tfx-translate-y, 0)) scale(var(--stonex-tfx-scale-x, 1), var(--stonex-tfx-scale-y, 1)) skew(var(--stonex-tfx-skew-x, 0), var(--stonex-tfx-skew-y, 0)) rotateX(var(--stonex-tfx-rotate-x, 0)) rotateY(var(--stonex-tfx-rotate-y, 0)) rotateZ(var(--stonex-tfx-rotate-z, 0));
+  }
+  
+  .stonex-css-transform-yes:hover {
+    -webkit-transform: translate(var(--stonex-tfx-translate-x-hover, var(--stonex-tfx-translate-x, 0)),
+        var(--stonex-tfx-translate-y-hover, var(--stonex-tfx-translate-y, 0))) scale(var(--stonex-tfx-scale-x-hover, var(--stonex-tfx-scale-x, 1)),
+        var(--stonex-tfx-scale-y-hover, var(--stonex-tfx-scale-y, 1))) skew(var(--stonex-tfx-skew-x-hover, var(--stonex-tfx-skew-x, 0)),
+        var(--stonex-tfx-skew-y-hover, var(--stonex-tfx-skew-y, 0))) rotateX(var(--stonex-tfx-rotate-x-hover, var(--stonex-tfx-rotate-x, 0))) rotateY(var(--stonex-tfx-rotate-y-hover, var(--stonex-tfx-rotate-y, 0))) rotateZ(var(--stonex-tfx-rotate-z-hover, var(--stonex-tfx-rotate-z, 0)));
+    transform: translate(var(--stonex-tfx-translate-x-hover, var(--stonex-tfx-translate-x, 0)),
+        var(--stonex-tfx-translate-y-hover, var(--stonex-tfx-translate-y, 0))) scale(var(--stonex-tfx-scale-x-hover, var(--stonex-tfx-scale-x, 1)),
+        var(--stonex-tfx-scale-y-hover, var(--stonex-tfx-scale-y, 1))) skew(var(--stonex-tfx-skew-x-hover, var(--stonex-tfx-skew-x, 0)),
+        var(--stonex-tfx-skew-y-hover, var(--stonex-tfx-skew-y, 0))) rotateX(var(--stonex-tfx-rotate-x-hover, var(--stonex-tfx-rotate-x, 0))) rotateY(var(--stonex-tfx-rotate-y-hover, var(--stonex-tfx-rotate-y, 0))) rotateZ(var(--stonex-tfx-rotate-z-hover, var(--stonex-tfx-rotate-z, 0)));
+  }
+  
+  
+  /*---------------------------------------------------
+  CONTACT FORM
+  ----------------------------------------------------*/
+  .stonex--contactform-wraper.absolute {
+    position: relative;
+  }
+  
+  .stonex--contactform-wraper.absolute input[type=submit],
+  .stonex--contactform-wraper.absolute button[type=submit] {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  span.wpcf7-list-item label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: right;
+  }
+  
+  span.wpcf7-form-control.wpcf7-checkbox.wpcf7-validates-as-required.wpcf7-exclusive-checkbox {
+    width: 100%;
+  }
+  
+  form.wpcf7-form input[type=“checkbox”],
+  form.wpcf7-form [type=“radio”] {
+    margin-left: 10px;
+  }
+  
+  --------------------------------------------------------------*/ .stonex-contact-from input[type="text"],
+  .stonex-contact-from input[type="email"],
+  .stonex-contact-from input[type="url"],
+  .stonex-contact-from input[type="tel"],
+  .stonex-contact-from input[type="date"],
+  .stonex-contact-from input[type="number"],
+  .stonex-contact-from textarea {
+    background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    float: none;
+    height: auto;
+    margin: 0;
+    outline: 0;
+  }
+  
+  textarea {
+    width: 100%;
+    max-height: 140px;
+  }
+  
+  .wpcf7-form-control-wrap {
+    display: block;
+    position: relative;
+  }
+  
+  .stonex-contact-from input:not([type=checkbox]) {
+    height: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  
+  form.wpcf7-form input {
+    width: 100%;
+  }
+  
+  .stonex-contact-from input[type=submit],
+  .stonex-contact-from button[type=submit] {
+    background-color: #6A26DA;
+    color: #fff;
+    font-weight: 600;
+    height: 70px;
+    width: 172px;
+    padding: 0px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+  }
+  
+  .stonex-contact-from input[type="submit"],
+  .stonex-contact-from input[type="button"] {
+    transition: all 0.25s linear 0s;
+    -webkit-transition: all 0.25s linear 0s;
+    -moz-transition: all 0.25s linear 0s;
+    -ms-transition: all 0.25s linear 0s;
+    -o-transition: all 0.25s linear 0s;
+  }
+  
+  .stonex-contact-from.placeholder-hide input::-webkit-input-placeholder,
+  .stonex-contact-from.placeholder-hide textarea::-webkit-input-placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .stonex-contact-from.placeholder-hide input::-moz-placeholder,
+  .stonex-contact-from.placeholder-hide textarea::-moz-placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .stonex-contact-from.placeholder-hide input:-ms-input-placeholder,
+  .stonex-contact-from.placeholder-hide textarea:-ms-input-placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .stonex-contact-from.placeholder-hide input:-moz-placeholder,
+  .stonex-contact-from.placeholder-hide textarea:-moz-placeholder {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .stonex-custom-radio-checkbox input[type="checkbox"],
+  .stonex-custom-radio-checkbox input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-style: solid;
+    border-width: 0;
+    outline: none;
+    min-width: 1px;
+    width: 15px;
+    height: 15px;
+    background: #ddd;
+    padding: 3px;
+  }
+  
+  .stonex-custom-radio-checkbox input[type="checkbox"]:before,
+  .stonex-custom-radio-checkbox input[type="radio"]:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  
+  .stonex-custom-radio-checkbox input[type="checkbox"]:checked:before,
+  .stonex-custom-radio-checkbox input[type="radio"]:checked:before {
+    background: #999;
+    transition: all 0.25s linear 0s;
+    -webkit-transition: all 0.25s linear 0s;
+    -moz-transition: all 0.25s linear 0s;
+    -ms-transition: all 0.25s linear 0s;
+    -o-transition: all 0.25s linear 0s;
+  }
+  
+  .stonex-custom-radio-checkbox input[type="radio"] {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  
+  .stonex-custom-radio-checkbox input[type="radio"]:before {
+    border-radius: 50%;
+  }
+  
+  .stonex--contactform-wraper .form-content-area h2 {
+    margin: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 35px;
+    text-align: center;
+    color: #12141D;
+    margin-bottom: 15px;
+  }
+  
+  .stonex--contactform-wraper .form-content-area p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(18, 20, 29, 0.7);
+  }
+  
+  .stonex--contactform-wraper .form-content-area {
+    padding-right: 100px;
+    padding-left: 100px;
+    margin-bottom: 50px;
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .stonex--contactform-wraper .form-content-area {
+      padding-right: 0px;
+      padding-left: 0px;
+      margin-bottom: 40px;
+    }
+  
+    .menu-style-flyout .main-navigation ul.navbar-nav>li {
+      display: inline-block;
+    }
+  }
+  
+  form.wpcf7-form .nice-select {
+    display: flex;
+    align-items: center;
+  }
+  
+  form.wpcf7-form .nice-select .current {
+    color: var(--white-color);
+    overflow: hidden;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  form.wpcf7-form input.wpcf7-form-control {
+    outline: 0px;
+  }
+  
+  form.wpcf7-form .nice-select:after {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    height: 7px;
+    left: 20px;
+    width: 7px;
+  }
+  
+  form.wpcf7-form .nice-select:after {
+    border-color: #fff;
+    left: 15px;
+  }
+  
+  form.wpcf7-form .nice-select li.option {
+    color: #3F527A;
+  }
+  
+  /*---------------------------------------------------
+  DUAL BUTTON
+  ----------------------------------------------------*/
+  .stonex-dual-button {
+    display: table;
+  }
+  
+  .stonex-dual-button.stonex-dual-button-align-left {
+    margin-left: auto;
+  }
+  
+  .stonex-dual-button.stonex-dual-button-align-center {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .stonex-dual-button.stonex-dual-button-align-right {
+    margin-right: auto;
+  }
+  
+  .stonex-dual-button-action {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .stonex-dual-button-primary {
+    position: relative;
+  }
+  
+  .stonex-dual-button-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stonex-dual-button-primary {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stonex-dual-button-secondary {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stonex-dual-button-connector {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .stonex-dual-button-connector span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+  }
+  
+  /* effect 1 style */
+  .stonex-dual-button-primary.effect-1,
+  .stonex-dual-button-secondary.effect-1,
+  .stonex-dual-button-primary.effect-2,
+  .stonex-dual-button-secondary.effect-2,
+  .stonex-dual-button-primary.effect-3,
+  .stonex-dual-button-secondary.effect-3,
+  .stonex-dual-button-primary.effect-4,
+  .stonex-dual-button-secondary.effect-4,
+  .stonex-dual-button-primary.effect-6,
+  .stonex-dual-button-secondary.effect-6 {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-dual-button-primary.effect-1::before,
+  .stonex-dual-button-secondary.effect-1::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-dual-button-primary.effect-1:hover,
+  .stonex-dual-button-secondary.effect-1:hover {
+    z-index: 1;
+  }
+  
+  .stonex-dual-button-primary.effect-1:hover::before,
+  .stonex-dual-button-secondary.effect-1:hover::before {
+    width: 100%;
+    z-index: -1;
+  }
+  
+  /* effect 2 style */
+  .stonex-dual-button-primary.effect-2::before,
+  .stonex-dual-button-secondary.effect-2::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  
+  .stonex-dual-button-primary.effect-2:hover,
+  .stonex-dual-button-secondary.effect-2:hover {
+    z-index: 1;
+  }
+  
+  .stonex-dual-button-primary.effect-2:hover::before,
+  .stonex-dual-button-secondary.effect-2:hover::before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  /* effect 3 style */
+  .stonex-dual-button-primary.effect-3::before,
+  .stonex-dual-button-secondary.effect-3::before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-dual-button-primary.effect-3:hover,
+  .stonex-dual-button-secondary.effect-3:hover {
+    z-index: 1;
+  }
+  
+  .stonex-dual-button-primary.effect-3:hover::before,
+  .stonex-dual-button-secondary.effect-3:hover::before {
+    height: 100%;
+    z-index: -1;
+  }
+  
+  /* effect 4 style */
+  .stonex-dual-button-primary.effect-4::before,
+  .stonex-dual-button-secondary.effect-4::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    bottom: 50%;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-dual-button-primary.effect-4:hover,
+  .stonex-dual-button-secondary.effect-4:hover {
+    z-index: 1;
+  }
+  
+  .stonex-dual-button-primary.effect-4:hover::before,
+  .stonex-dual-button-secondary.effect-4:hover::before {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    z-index: -1;
+  }
+  
+  /* effect 5 style */
+  .stonex-dual-button-primary.effect-5,
+  .stonex-dual-button-secondary.effect-5 {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  /* effect 6 style */
+  .stonex-dual-button-primary.effect-6::before,
+  .stonex-dual-button-secondary.effect-6::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  
+  .stonex-dual-button-primary.effect-6:hover,
+  .stonex-dual-button-secondary.effect-6:hover {
+    z-index: 1;
+  }
+  
+  .stonex-dual-button-primary.effect-6:hover::before,
+  .stonex-dual-button-secondary.effect-6:hover::before {
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .stonex-dual-button-secondary span {
+    transition: 0.03s;
+  }
+  
+  .stonex-dual-button-primary span {
+    transition: 0.03s;
+  }
+  
+  /*---------------------------------------------------
+  DUAL HEADDING
+  ----------------------------------------------------*/
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper {
+    padding: 5px;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-description {
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    padding: 10px;
+    font-weight: 400;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-icon {
+    display: inline-block;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-icon i {
+    font-size: 36px;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-title {
+    font-size: 36px;
+    margin-top: 10px;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-title {
+    font-size: 30px;
+    line-height: 0px;
+    color: #132c47;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-title .first-heading,
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-title .second-heading {
+    padding: 15px 10px;
+  }
+  
+  .stonex-addons-dual-heading .stonex-addons-dual-heading-wrapper .stonex-addons-dual-heading-title span {
+    color: #132c47;
+  }
+  
+  .stonex-dual-button-primary,
+  .stonex-dual-button-secondary {
+    font-weight: 700;
+  }
+  
+  
+  /*---------------------------------------------------
+  BREADCRUMB
+  ----------------------------------------------------*/
+  
+  ul.stonex-breadcrumbs {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  ul.stonex-breadcrumbs li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+  
+  ul.stonex-breadcrumbs li:last-stonex {
+    margin: 0;
+  }
+  
+  ul.stonex-breadcrumbs li a,
+  ul.stonex-breadcrumbs li span.stonex-breadcrumbs-text,
+  ul.stonex-breadcrumbs li span.stonex-breadcrumbs-separator-icon {
+    display: block;
+  }
+  
+  ul.stonex-breadcrumbs li span.stonex-breadcrumbs-text {
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+  }
+  
+  span.stonex-breadcrumbs-home-icon {
+    margin-left: 10px;
+  }
+  
+  /*---------------------------------------------------
+  ANIMATED TEXT
+  ----------------------------------------------------*/
+  .morphext>.animated {
+    display: inline-block;
+  }
+  
+  .stonex-animated-text-align-left {
+    text-align: right;
+  }
+  
+  .stonex-animated-text-align-center {
+    text-align: center;
+  }
+  
+  .stonex-animated-text-align-right {
+    text-align: left;
+  }
+  
+  .stonex-typed-strings {
+    margin: 0;
+  }
+  
+  .stonex-animated-text-pre-heading,
+  .stonex-animated-text-animated-heading,
+  .stonex-animated-text-post-heading {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  /*---------------------------------------------------
+  PRICING BOX
+  ----------------------------------------------------*/
+  
+  .stonex-pricing-list-wrapper.border_bottom .stonex-pricing-list-item:last-stonex {
+    border-bottom: none !important;
+  }
+  
+  .stonex-pricing-list-item.yes {
+    display: flex;
+  }
+  
+  .stonex-pricing-list-item-thumbnail {
+    overflow: hidden;
+  }
+  
+  .stonex-pricing-list-item-thumbnail img {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+  }
+  
+  .stonex-pricing-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stonex-pricing-title .stonex-pricing-list-item-price {
+    margin-right: auto;
+  }
+  
+  .stonex-addons-pricing-table-action .price_btn {
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .stonex-pricing-list-item-content-title {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .stonex-pricing-list-item-content-description {
+    margin: 0;
+  }
+  
+  .stonex-pricing-list-item-price span {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  
+  .stonex-pricing-list-item-content-action {
+    display: inline-block;
+    transition: all .3s ease;
+  }
+  
+  .stonex-pricing-list-item-content-conntector {
+    border-bottom: 1px dashed;
+    height: 1px;
+    flex-grow: 1;
+    align-self: center;
+    margin: 0 15px;
+  }
+  
+  ul.stonex-addons-pricing-table-features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .stonex-addons-pricing-table-price-subtitle {
+    display: inline-block;
+  }
+  
+  .stonex-addons-pricing-table-action span {
+    display: inline-block;
+  }
+  
+  a.stonex-addons-pricing-table-action .price_btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  a.stonex-addons-pricing-table-action {
+    align-items: center;
+    display: flex;
+  }
+  
+  /* Pricing List End */
+  /* Pricing Table Start */
+  
+  .left {
+    text-align: right;
+  }
+  
+  .left .stonex-pricing-table-features li {
+    justify-content: flex-start;
+  }
+  
+  .left .price-box {
+    margin-left: auto;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .center.stonex-pricing-table-features li {
+    justify-content: center;
+  }
+  
+  .center .price-box {
+    margin: 0 auto;
+  }
+  
+  .right {
+    text-align: left;
+  }
+  
+  .right .stonex-pricing-table-features li {
+    justify-content: flex-end;
+  }
+  
+  .right .price-box {
+    margin-right: auto;
+  }
+  
+  .stonex-pricing-table-header {
+    position: relative;
+    z-index: -1;
+  }
+  
+  .stonex-pricing-table-header .stonex-pricing-table-header-curved svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .stonex-pricing-table-title {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .stonex-pricing-table-subtitle {
+    margin: 0 0 10px 0;
+  }
+  
+  .price-box {
+    position: relative;
+  }
+  
+  .stonex-pricing-table-price {
+    position: relative;
+  }
+  
+  .stonex-pricing-table-price.stonex-discount-price-yes {
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  
+  .stonex-pricing-table-price.stonex-discount-price-yes .stonex-pricing-table-regular-price {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: #e5e5e5;
+    line-height: 2.1em;
+  }
+  
+  .stonex-pricing-table-price svg {
+    position: absolute;
+  }
+  
+  .stonex-pricing-table-wrapper .stonex-pricing-table-price p.stonex-pricing-table-new-price {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -3.2px;
+  }
+  
+  .stonex-pricing-table-wrapper .stonex-pricing-table-price span.stonex-price-period {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0px;
+  }
+  
+  .stonex-pricing-table-price p {
+    margin: 0;
+  }
+  
+  .price-box p {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    margin: 0;
+    width: 100%;
+  }
+  
+  .stonex-pricing-table-features {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .stonex-pricing-table-features li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  
+  .list-border-bottom li:not(:last-stonex) {
+    border-bottom: 1px solid #ff5985;
+  }
+  
+  .stonex-pricing-table-features li .stonex-pricing-li-icon {
+    margin-left: 7px;
+  }
+  
+  .stonex-pricing-table-action {
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 1;
+    display: inline-block;
+  }
+  
+  .stonex-pricing-table-badge-wrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s ease;
+  }
+  
+  .stonex-pricing-table-wrapper {
+    transition: all .3s ease;
+  }
+  
+  .stonex-pricing-table-wrapper.transition_top {
+    transition: all .3s ease;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_top:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_bottom {
+    transition: all .3s ease;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_bottom:hover {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_zoom {
+    transition: all .3s ease;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_zoom:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+  }
+  
+  .stonex-pricing-table-wrapper .text-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #13c83a;
+    padding: 13px 50px;
+    width: 160px;
+    text-align: center;
+    -webkit-transform: rotate(45deg) translate(-40px, -22px);
+    transform: rotate(45deg) translate(-40px, -22px);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .stonex-pricing-table-wrapper .icon-badge {
+    position: absolute;
+    padding: 15px 10px;
+    border-radius: 0 0 40px 40px;
+    background: #13c83a;
+    left: 30px;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .stonex-pricing-table-promo-label {
+    display: block;
+  }
+  
+  .stonex-pricing-table-currency {
+    position: relative;
+  }
+  
+  .stonex-pricing-table-price-subtitle {
+    display: block;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .stonex-addons-pricing-table-features li {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  /*---------------------------------------------------
+  PRICING TABLE WITH SWICHER
+  ----------------------------------------------------*/
+  
+  .left {
+    text-align: right;
+  }
+  
+  .left .stonex-pricing-table-features li {
+    justify-content: flex-start;
+  }
+  
+  .left .price-box {
+    margin-left: auto;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .center.stonex-pricing-table-features li {
+    justify-content: center;
+  }
+  
+  .center .price-box {
+    margin: 0 auto;
+  }
+  
+  .right {
+    text-align: left;
+  }
+  
+  .right .stonex-pricing-table-features li {
+    justify-content: flex-end;
+  }
+  
+  .stonex-pricing-table-features li:last-stonex {
+    padding-bottom: 0px !important;
+  }
+  
+  .right .price-box {
+    margin-right: auto;
+  }
+  
+  .stonex-pricing-table-header {
+    position: relative;
+    z-index: -1;
+  }
+  
+  .stonex-pricing-table-header .stonex-pricing-table-header-curved svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .stonex-pricing-table-title {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  
+  .stonex-pricing-table-subtitle {
+    margin: 0 0 10px 0;
+  }
+  
+  .stonex-pricing-features ul li {
+    display: inline-flex;
+  }
+  
+  .price-box {
+    position: relative;
+  }
+  
+  .stonex-pricing-table-price {
+    position: relative;
+  }
+  
+  .stonex-pricing-table-price.stonex-discount-price-yes {
+    display: inline-flex;
+    align-items: flex-end;
+  }
+  
+  .stonex-pricing-table-price.stonex-discount-price-yes .stonex-pricing-table-regular-price {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: #e5e5e5;
+    line-height: 2.1em;
+  }
+  
+  .stonex-pricing-table-price svg {
+    position: absolute;
+  }
+  
+  .stonex-pricing-table-wrapper .stonex-pricing-table-price p.stonex-pricing-table-new-price {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -3.2px;
+  }
+  
+  .stonex-pricing-table-wrapper .stonex-pricing-table-price span.stonex-price-period {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0px;
+  }
+  
+  .stonex-pricing-table-price p {
+    margin: 0;
+  }
+  
+  .price-box p {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    margin: 0;
+    width: 100%;
+  }
+  
+  .stonex-pricing-table-features {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .stonex-pricing-table-features li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  
+  .list-border-bottom li:not(:last-stonex) {
+    border-bottom: 1px solid #ff5985;
+  }
+  
+  .stonex-pricing-table-features li .stonex-pricing-li-icon {
+    margin-left: 7px;
+  }
+  
+  .stonex-pricing-table-action {
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stonex-pricing-table-badge-wrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s ease;
+  }
+  
+  .stonex-pricing-table-wrapper {
+    transition: all .3s ease;
+  }
+  
+  .stonex-pricing-table-wrapper.transition_top {
+    transition: all .3s ease;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_top:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_bottom {
+    transition: all .3s ease;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_bottom:hover {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_zoom {
+    transition: all .3s ease;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+  
+  .stonex-pricing-table-wrapper.transition_zoom:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+  }
+  
+  .stonex-pricing-table-wrapper .text-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #13c83a;
+    padding: 13px 50px;
+    width: 160px;
+    text-align: center;
+    -webkit-transform: rotate(45deg) translate(-40px, -22px);
+    transform: rotate(45deg) translate(-40px, -22px);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  .stonex-pricing-table-wrapper .icon-badge {
+    position: absolute;
+    padding: 15px 10px;
+    border-radius: 0 0 40px 40px;
+    background: #13c83a;
+    left: 30px;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .stonex-pricing-table-promo-label {
+    display: block;
+  }
+  
+  .stonex-pricing-table-currency {
+    position: relative;
+  }
+  
+  .stonex-pricing-table-price-subtitle {
+    display: block;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a.stonex-btn.yearly-btn {
+    display: none;
+  }
+  
+  [data-value-active="yearly"] a.stonex-btn.yearly-btn {
+    display: inline-flex;
+  }
+  
+  [data-value-active="yearly"] a.stonex-btn.monthly-btn {
+    display: none;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-item {
+    border: 1px solid #e7e9ed;
+    color: var(--text-color);
+    padding: 35px 50px 35px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.63px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  
+  div#pricing-dynamic-deck--head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-features {
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    line-height: 29px;
+  }
+  
+  .stonex-pricing-features img {
+    margin-left: 10px;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-features p {
+    margin-bottom: 15px;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-item .stonex-price h2 {
+    font-size: 60px;
+    color: var(--heading-color);
+    font-weight: 700;
+    letter-spacing: -2px;
+    display: inline-block;
+    margin: 0px;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-item .stonex-price {
+    font-weight: 400;
+  }
+  
+  .stonex-pricing-area .stonex-price.stonex-price-yearly {
+    display: none;
+  }
+  
+  .stonex-pricing-item span.price-currency {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+  }
+  
+  .stonex-pricing-item a.stonex-btn.btn-type-boxed {
+    background-color: rgb(71 59 240 / 0.08);
+    color: var(--accent-color);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    padding: 19.5px 20px;
+    line-height: 1;
+    border-radius: 8px;
+  }
+  
+  .stonex-pricing-item a.stonex-btn.btn-type-boxed i {
+    margin-right: 40px;
+  }
+  
+  .stonex-pricing-item a.stonex-btn.btn-type-boxed:hover {
+    -webkit-transform: translatey(-8px);
+    transform: translatey(-8px);
+    -moz-transform: translatey(-8px);
+    -ms-transform: translatey(-8px);
+    -o-transform: translatey(-8px);
+  }
+  
+  .stonex-pricing-item.focused {
+    z-index: 1;
+  }
+  
+  .stonex-price-wrap span.price-subtitle.dynamic-value {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    line-height: 26px;
+    display: block;
+  }
+  
+  .stonex-pricing-area .stonex-pricing-tabs {
+    color: var(--heading-color);
+    font-size: 19px;
+    letter-spacing: -0.2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 55px;
+    flex-wrap: wrap;
+  }
+  
+  span.stonex-price-offer {
+    font-size: 13px;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 1.63px;
+    line-height: inherit;
+    background-color: rgb(71 59 240 / .1);
+    padding: 0.5px 13px;
+    border-radius: 30px;
+    margin-right: 0px;
+    text-transform: uppercase;
+  }
+  
+  #pricing-dynamic-deck--head .btn-toggle.active {
+    background-color: rgb(22 28 45 / .15);
+  }
+  
+  #pricing-dynamic-deck--head .btn-toggle {
+    width: 70px;
+    height: 33px;
+    border-radius: 17px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  #pricing-dynamic-deck--head .btn-toggle.active span {
+    left: calc(100% - 27px);
+  }
+  
+  #pricing-dynamic-deck--head .btn-toggle span {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 7px;
+    margin-right: 6px;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    border-radius: 500px;
+    pointer-events: none;
+  }
+  
+  .stonex-pricing-duration {
+    color: var(--heading-color);
+    font-size: 17px;
+    letter-spacing: -0.09px;
+    line-height: 29px;
+    margin-top: 15px;
+  }
+  
+  
+  .stonex-pricing-area .stonex-pricing-features strong {
+    color: #161c2d;
+  }
+  
+  .stonex-pricing-tabs.style-2 .stonex-pricing-tab {
+  
+    border-radius: 22px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  }
+  
+  .stonex-pricing-tabs.style-2 .stonex-pricing-tab a {
+    color: #666666;
+    font-size: 13px;
+    border-radius: 17px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
+  }
+  
+  .stonex-pricing-tabs.style-2 .stonex-pricing-tab a.active {
+    background-color: var(--accent-color);
+    color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .stonex-pricing-tabs.style-2 {
+    position: relative;
+  }
+  
+  .stonex-btn-wrapper .stonex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  /* Pricing dynamic css */
+  
+  [data-pricing-dynamic][data-value-active="yearly"] .dynamic-value:after {
+    display: inline-block;
+    content: attr(data-yearly);
+  }
+  
+  [data-pricing-dynamic][data-value-active="monthly"] .dynamic-value:after {
+    display: inline;
+    content: attr(data-monthly);
+  }
+  
+  .dynamic-value:after {
+    display: inline-block;
+    content: attr(data-active);
+  }
+  
+  .static-value:before {
+    display: inline-block;
+    content: attr(data-active);
+  }
+  
+  .stonex-price-wrap span.stonex-pricing-badge {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translate(50%);
+    width: 100%;
+    -webkit-transform: translate(50%);
+    -moz-transform: translate(50%);
+    -ms-transform: translate(50%);
+    -o-transform: translate(50%);
+  }
+  
+  
+  /* Pricing Table List */
+  
+  .pricing-table {
+    width: 100%;
+    border: none;
+  }
+  
+  .stonex-pricing-item .stonex-btn-wrapper {
+    display: flex;
+  }
+  
+  /* Table Header Top */
+  
+  .heading-top {
+    width: 100%;
+  }
+  
+  .pricing-table td.pricing-list:last-stonex {
+    border-left: 1px solid transparent;
+  }
+  
+  tr.pricing-feature.table-main-title:first-stonex .pricing-list-heading,
+  tr.pricing-feature.table-main-title:first-stonex td {
+    border-left: 1px solid transparent;
+    padding-top: 0 !important;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    tr.pricing-header th.pricing-heading:first-stonex {
+      width: 500px !important;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+  
+    .pricing-table,
+    .pricing-table th,
+    .pricing-table td,
+    .pricing-table tr,
+    .pricing-table tbody {
+      display: block;
+      width: 100%;
+      text-align: right;
+      border-left: 1px solid transparent;
+    }
+  
+    .pricing-table th,
+    .pricing-table td {
+      position: relative;
+      text-align: left;
+      border-left: 1px solid transparent !important;
+    }
+  
+    .pricing-table th:before,
+    .pricing-table td:before {
+      position: absolute;
+      content: attr(data-label);
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+    }
+  
+    .heading-top {
+      width: 100%;
+      display: inline-block;
+    }
+  
+    .table-main-title th {
+      text-align: right;
+    }
+  
+    .table-main-title td {
+      display: none;
+    }
+  
+    tr.pricing-header th.pricing-heading:first-stonex {
+      width: auto !important;
+    }
+  
+    .heading-wrapper {
+      display: flex !important;
+      justify-content: space-between;
+    }
+  
+    .heading-empty {
+      display: none !important;
+    }
+  
+    .elementor-1630 .elementor-element.elementor-element-d31a103 .pricing-heading {
+      width: 25%;
+    }
+  
+    .pricing-header h3 {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  
+  /*---------------------------------------------------
+  PROGRESS BAR
+  ----------------------------------------------------*/
+  .ldBar {
+    position: relative;
+  }
+  
+  .ldBar.label-center>.ldBar-label {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    text-shadow: 0 0 3px #ffffff;
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+  }
+  
+  .stonex-progress-bar .ldBar-label:after {
+    content: "%";
+    display: inline;
+    position: absolute;
+  }
+  
+  .ldBar.no-percent .ldBar-label:after {
+    content: ""
+  }
+  
+  
+  [class*="stonex-progress-bar-"].line {
+    position: relative;
+  }
+  
+  [class*="stonex-progress-bar-"].line .ldBar-label {
+    position: absolute;
+    top: -12px;
+    left: 0;
+  }
+  
+  [class*="stonex-progress-bar-"].line-bubble {
+    position: relative;
+  }
+  
+  [class*="stonex-progress-bar-"].line-bubble .ldBar-label {
+    position: absolute;
+    right: 0;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: translate(50%, 25%);
+    transform: translate(50%, 25%);
+    background-color: #ccc;
+    line-height: 27px;
+  }
+  
+  [class*="stonex-progress-bar-"].circle {
+    position: relative;
+  }
+  
+  [class*="stonex-progress-bar-"].circle .ldBar-label {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+  }
+  
+  [class*="stonex-progress-bar-"].circle h3 {
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  
+  [class*="stonex-progress-bar-"].fan {
+    position: relative;
+  }
+  
+  [class*="stonex-progress-bar-"].fan svg {
+    margin-top: -40%;
+  }
+  
+  [class*="stonex-progress-bar-"].fan h3 {
+    position: absolute;
+    bottom: -20px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  
+  [class*="stonex-progress-bar-"].fan .ldBar-label {
+    position: absolute;
+    right: 50%;
+    -webkit-transform: translate(50%, -20%);
+    transform: translate(50%, -20%);
+    font-size: 30px;
+    bottom: 7%;
+  }
+  
+  [class*="stonex-progress-bar-"].fan .left-title {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+  }
+  
+  [class*="stonex-progress-bar-"].fan .right-title {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+  
+  .stonex-progress-bar svg:not(:root) {
+    overflow: hidden;
+    height: inherit;
+  }
+  
+  .stonex-progress-bar-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Menu style 2  */
+  
+  .navbar.menu-style-flyout.mobile-menu-style-2 .navbar-inner {
+    left: auto;
+    right: 0;
+    transform: translatex(calc(-1*(-20px + 100%)));
+    width: 300px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .mobile-menu-style-2 .main-navigation {
+    padding: 0;
+  }
+  
+  .offcanvas--open #page:before {
+    visibility: visible;
+    opacity: .7;
+  }
+  
+  .menu-style-flyout.mobile-menu-style-2.navbar.active .navbar-inner {
+    transform: translatex(0);
+  }
+  
+  /*---------------------------------------------------
+  Menu style 3
+  ----------------------------------------------------*/
+  
+  .mobile-menu-style-3.menu-style-flyout .navbar-inner {
+    position: absolute;
+    height: fit-content;
+    top: 100%;
+    transform: translate(0) scaley(0);
+    transition: all .4s;
+    transform-origin: top;
+    padding: 26px 0;
+  }
+  
+  .mobile-menu-style-4 a.stonex-menu-logo {
+    width: 100px;
+    height: 40px;
+    background-size: contain;
+    position: absolute;
+    top: 30px;
+    display: inline-block;
+    z-index: 9;
+    right: 51px;
+  }
+  
+  .admin-bar .mobile-menu-style-4 a.stonex-menu-logo {
+    top: 60px;
+  }
+  
+  .menu-style-flyout .navbar-toggler-icon {
+    color: var(--heading-color)
+  }
+  
+  @media only screen and (min-width: 1025px) {
+  
+    .menu-item-has-children.stonex-mega-menu {
+      position: relative;
+    }
+  
+    .sub-menu li a:after {
+      display: none;
+    }
+  
+    .menu-item-has-children:hover>a:after {
+      opacity: 1;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    .stonex-header-buttons {
+      display: none !important;
+    }
+  }
+  
+  /*---------------------------------------------------
+  VIDEO BUTTON
+  ----------------------------------------------------*/
+  .stonex-modal-button .stonex-modal-image-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  
+  .top-to-middle {
+    -webkit-transform: translate(50%, -60%);
+    transform: translate(50%, -60%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-transform: translate(50%, -60%);
+    -ms-transform: translate(50%, -60%);
+    -o-transform: translate(50%, -60%);
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.modal-vimeo.bottom-to-middle {
+    -webkit-transform: translate(50%, -30%);
+    transform: translate(50%, -30%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-transform: translate(50%, -30%);
+    -ms-transform: translate(50%, -30%);
+    -o-transform: translate(50%, -30%);
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo.bottom-to-middle {
+    z-index: 9999;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    -moz-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    -o-transform: translate(50%, -50%);
+  }
+  
+  .stonex-modal-item.modal-vimeo.right-to-middle {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translate(30%, -50%);
+    transform: translate(30%, -50%);
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo.right-to-middle {
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    z-index: 9999;
+  }
+  
+  .stonex-modal-item.modal-vimeo.left-to-middle {
+    -webkit-transform: translate(70%, -50%);
+    transform: translate(70%, -50%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo.left-to-middle {
+    z-index: 9999;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+  }
+  
+  .stonex-modal-item.modal-vimeo.zoom-in {
+    -webkit-transform: translate(50%, -50%) scale(0.5);
+    transform: translate(50%, -50%) scale(0.5);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo.zoom-in {
+    z-index: 9999;
+    -webkit-transform: translate(50%, -50%) scale(1);
+    transform: translate(50%, -50%) scale(1);
+  }
+  
+  .stonex-modal-item.modal-vimeo.zoom-out {
+    -webkit-transform: translate(50%, -50%) scale(1.5);
+    transform: translate(50%, -50%) scale(1.5);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo.zoom-out {
+    z-index: 9999;
+    display: block;
+    -webkit-transform: translate(50%, -50%) scale(1);
+    transform: translate(50%, -50%) scale(1);
+  }
+  
+  .stonex-modal-item.modal-vimeo.left-rotate {
+    opacity: 0;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate(50%, -50%) rotateX(90deg);
+    transform: translate(50%, -50%) rotateX(90deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo.left-rotate {
+    opacity: 1;
+    z-index: 9999;
+    -webkit-transform: translate(50%, -50%) rotateX(0);
+    transform: translate(50%, -50%) rotateX(0);
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-close-btn {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-close-btn span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-close-btn span::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    transform: translate(50%, -50%) rotate(45deg);
+    top: 50%;
+    right: 50%;
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-close-btn span::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    background: #fff;
+    transform: translate(50%, -50%) rotate(45deg);
+    top: 50%;
+    right: 50%;
+  }
+  
+  .stonex-modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: none;
+  }
+  
+  .stonex-modal-overlay.active {
+    opacity: 1;
+    z-index: 1000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element.column-one .stonex-modal-element-card {
+    width: 100%;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element.column-two .stonex-modal-element-card {
+    width: 50%;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element.column-three .stonex-modal-element-card {
+    width: 33.33%;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element.column-four .stonex-modal-element-card {
+    width: 25%;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element.column-five .stonex-modal-element-card {
+    width: 20%;
+  }
+  
+  .stonex-modal-item.image-gallery .stonex-modal-element.column-six .stonex-modal-element-card {
+    width: 16.66%;
+  }
+  
+  .stonex-modal-item {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translateX(50%) translateY(-50%);
+    transform: translateX(50%) translateY(-50%);
+  }
+  
+  .stonex-modal-item.modal-vimeo {
+    opacity: 0;
+    -webkit-transform: translate(50%, -60%);
+    transform: translate(50%, -60%);
+    height: auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    visibility: hidden;
+  }
+  
+  @media (max-width: 991px) {
+    .stonex-modal-item.modal-vimeo {
+      height: 100%;
+    }
+  
+    .stonex-modal-item.modal-vimeo::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-modal-element img {
+    display: block;
+    width: 100%;
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-modal-element .stonex-modal-element-card .stonex-modal-element-card-body p {
+    margin: 0;
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content .stonex-modal-element .stonex-modal-element-card img {
+    display: block;
+    width: 100%;
+  }
+  
+  .stonex-modal-item.modal-vimeo .stonex-modal-content {
+    position: relative;
+  }
+  
+  .stonex-modal-item .stonex-modal-content .stonex-modal-element iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .stonex-modal-item.active.modal-vimeo {
+    opacity: 1;
+    z-index: 2000;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    visibility: visible;
+  }
+  
+  
+  .stonex-modal-wrapper .stonex-modal-item.stonex-content-overflow-x- {
+    overflow-x: hidden;
+  }
+  
+  .stonex-modal-wrapper .stonex-modal-item.stonex-content-overflow-y- {
+    overflow-y: scroll;
+  }
+  
+  .stonex-modal-wrapper .stonex-modal-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stonex-video-btn {
+    display: inline-block;
+    transition: 0.4s;
+  }
+  
+  /*---------------------------------------------------
+    ACCORDION
+    ----------------------------------------------------*/
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title h3 {
+    width: 100%;
+    font-size: 15px;
+  }
+  
+  .stonex-accordion-single-item h3 {
+    font-weight: 600;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title:hover {
+    cursor: pointer;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-active-inactive-icon.right {
+    position: relative;
+    margin-right: 15px;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title span.stonex-tab-title-icon {
+    position: relative;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-active-icon.right i,
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-inactive-icon.right i,
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title span.stonex-tab-title-icon.right i {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 20px;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-active-icon.right svg,
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-inactive-icon.right svg,
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title span.stonex-tab-title-icon.right svg {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    font-size: 20px;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title.active .stonex-inactive-icon,
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-active-icon {
+    display: none;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title.active .stonex-active-icon {
+    display: block;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content {
+    display: none;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-title .stonex-active-inactive-icon.right {
+    width: 70px;
+    margin-right: auto;
+  }
+  
+  .stonex-active-inactive-icon.left {
+    width: 5%;
+  
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper {
+    display: flex;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper.has-image-yes .stonex-accordion-text {
+    width: 60%;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper.has-image-yes .stonex-accordion-image {
+    width: 40%;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper.has-image-yes.image-position-left .stonex-accordion-text {
+    order: 2;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper.has-image-yes.image-position-left .stonex-accordion-image {
+    order: 1;
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper .stonex-accordion-button a {
+    display: inline-block;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper {
+      flex-direction: column;
+    }
+  
+    .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper.has-image-yes .stonex-accordion-text,
+    .stonex-accordion-items .stonex-accordion-single-item .stonex-accordion-content .stonex-accordion-content-wrapper.has-image-yes .stonex-accordion-image {
+      width: 100%;
+    }
+  
+  }
+  
+  .stonex-accordion-items .stonex-accordion-single-item:last-stonex {
+    border-bottom: 0 !IMPORTANT;
+  }
+  
+  .stonex-accordion-number span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #222;
+    margin: 10px;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  /* SEARCH */
+  
+  .stonex-search-form-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .stonex-search-button-wrapper input[type=search] {
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0;
+    transition: all .5s;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .stonex-search-button-wrapper button {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+  }
+  
+  .stonex-search-button-wrapper input[type=search]:focus {
+    cursor: auto;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .stonex-search-icon-toggle input:-moz-placeholder,
+  .stonex-search-icon-toggle input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .stonex-search-button-wrapper.stonex-input-focus {
+    display: flex;
+  }
+  
+  .stonex-search-form-container .stonex-search-submit {
+    min-width: 3%;
+    position: relative;
+  }
+  
+  .stonex-search-form-container button#clear,
+  .stonex-search-icon-toggle button#clear {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 8px;
+    font-style: normal;
+    user-select: none;
+    cursor: pointer;
+    bottom: 0;
+    margin-left: 10px;
+    background-color: transparent;
+  }
+  
+  .stonex-search-button-wrapper input[type="search"]::-webkit-search-decoration,
+  .stonex-search-button-wrapper input[type="search"]::-webkit-search-cancel-button,
+  .stonex-search-button-wrapper input[type="search"]::-webkit-search-results-button,
+  .stonex-search-button-wrapper input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+  
+  .stonex-search-form-container button#clear-with-button {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    padding: 0 8px;
+    font-style: normal;
+    font-size: 1.2em;
+    user-select: none;
+    cursor: pointer;
+    bottom: 0;
+    background-color: transparent;
+  }
+  
+  .stonex-search-button-wrapper,
+  .stonex-search-form-container,
+  .stonex-search-icon-toggle,
+  .stonex-search-button-wrapper .stonex-search-icon-toggle i,
+  .stonex-search-button-wrapper .stonex-search-icon-toggle i:before {
+    position: relative;
+  }
+  
+  .stonex-search-button-wrapper .stonex-search-icon-toggle .stonex-search-form-input {
+    position: absolute;
+    width: 0;
+    left: 0;
+    background-color: transparent;
+  }
+  
+  .stonex-search-icon-toggle {
+    width: 100% !important;
+  }
+  
+  .stonex-search-button-wrapper.stonex-input-focus .stonex-search-icon-toggle .stonex-search-form-input {
+    position: absolute;
+    width: 250px;
+    left: 0;
+  }
+  
+  .stonex-search-type-text .stonex-search-form-container,
+  .stonex-search-type-icon_text .stonex-search-form-container,
+  .stonex-search-type-text .stonex-search-form-container .stonex-search-form-input,
+  .stonex-search-type-icon_text .stonex-search-form-container .stonex-search-form-input {
+    width: 100%;
+  }
+  
+  .stonex-search-icon-toggle {
+    line-height: 1.5;
+  }
+  
+  .stonex-search-button-wrapper {
+    display: none;
+  }
+  
+  #search_icon i {
+    cursor: pointer;
+  }
+  
+  #search_icon {
+    display: flex;
+  }
+  
+  .search-main-wrapper.cross-menu #search_icon {
+    display: none;
+  }
+  
+  .stonex-search-overly {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+  }
+  
+  .stonex-search-overly.search-body-bg {
+    opacity: 1;
+    z-index: 2;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .cross-icon {
+    display: none;
+  }
+  
+  .cross-menu .cross-icon {
+    display: block;
+  }
+  
+  #cross_icon {
+    position: fixed;
+    left: 23%;
+    top: 32%;
+    z-index: 99;
+  }
+  
+  #cross_icon i {
+    font-size: 20px;
+    ;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  form.stonex-search-button-wrapper.stonex-search-type-text {
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background: #fff;
+  }
+  
+  form.stonex-search-button-wrapper {
+    z-index: 99;
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 1024px) {
+    form.stonex-search-button-wrapper.stonex-search-type-text {
+      width: 90%;
+    }
+  }
+  
+  /*---------------------------------------------------
+  TESTIMONIAL
+  ----------------------------------------------------*/
+  .stonex-testimonial__name h4.stonex-testimonial__decription {
+    margin: 0px;
+  }
+  
+  .stonex-testimonial__position p.stonex-testimonial__decription {
+    margin: 0px;
+  }
+  
+  .stonex-testimonial__position p {
+    margin: 0px;
+  }
+  
+  .stonex-testimonial__single {
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+  }
+  
+  .stonex-testimonial-slider-arrow {
+    position: absolute;
+    width: 100%;
+  }
+  
+  
+  .stonex-testimonial:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .stonex-testimonial ul.stonex-testimonial-slider-dot-list {
+    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .stonex-testimonial ul.stonex-testimonial-slider-dot-list {
+    list-style: none;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    position: absolute;
+    right: 40px;
+  }
+  
+  .stonex-testimonial ul.stonex-testimonial-slider-dot-list li.slick-active {
+    width: 10px !important;
+    height: 10px !important;
+    background: #2C4BFF !important;
+    opacity: 1;
+    transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+  }
+  
+  .stonex-testimonial ul.stonex-testimonial-slider-dot-list li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background: #1E3D59;
+    cursor: pointer;
+  }
+  
+  .stonex-testimonial ul.stonex-testimonial-slider-dot-list li button {
+    display: none;
+  }
+  
+  .stonex-testimonial__name p {
+    margin-bottom: 0px;
+  }
+  
+  @media (min-width: 1200px) {
+    .stonex-testimonial ul.stonex-testimonial-slider-dot-list {
+      margin-top: 40px;
+  
+    }
+  }
+  
+  /* arrow */
+  .stonex-testimonial-slider-arrow .slick-prev:before,
+  .stonex-testimonial-slider-arrow .slick-next:before {
+    display: none;
+  }
+  
+  .stonex-testimonial-slider-arrow.slick-active {
+    color: #1D263A;
+  }
+  
+  .stonex-testimonial-slider-arrow .prev {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
+  
+  .stonex-testimonial-slider-arrow .next {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+  }
+  
+  .stonex-testimonial-slider-arrow .slick-active {
+    background: #2C4BFF;
+    color: #fff;
+  }
+  
+  .stonex-testimonial-slider-arrow button {
+    transition: all 0.4s ease-in-out;
+    font-size: 20px;
+    color: #1D263A;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background: rgba(44, 71, 255, 0.6);
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+  }
+  
+  .stonex-testimonial-slider-arrow button:hover {
+    background-color: #1D263A;
+    color: #fff;
+  }
+  
+  
+  /* Style one */
+  
+  .stonex-testimonial .style-one .col-xl-4:last-stonex .stonex-testimonial__single {
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+  }
+  
+  .stonex-testimonial-v3-slider .stonex-testimonial__meta-content {
+    display: flex;
+    flex-wrap: wrap
+  }
+  
+  
+  .stonex-testimonial-v3-slider .testimonial-content {
+    width: 75%;
+  }
+  
+  .stonex-testimonial-v3-slider .user-image {
+    width: 25%;
+  }
+  
+  .stonex-testimonial-v3-slider .user-identity {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  p.tm-bottom-text {
+    margin-bottom: 0px;
+  }
+  
+  .testimonial-two-top-meta .right-content {
+    margin-right: 55px;
+    margin-bottom: 23px;
+  }
+  
+  .stonex-testimonial__single.style-eight p.stonex-testimonial__decription.stonex-size-default {
+    text-align: center;
+  }
+  
+  .stonex-testimonial__single.style-eight .stonex-testimonial__meta-content {
+    justify-content: center;
+  }
+  
+  /*****************************************************
+                     menu fix
+  ******************************************************/
+  .stonex-main-menu-wrap .navbar-inner {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+  }
+  
+  .stonex-main-menu-wrap .stonex-header-buttons {
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  /*---------------------------------------------------
+  TAB
+  ----------------------------------------------------*/
+  .stonex-tab-content-single {
+    display: none;
+  }
+  
+  .stonex-tab-content-single.current {
+    display: block;
+  }
+  
+  .stonex--tab-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .stonex--tab-menu ul li {
+    display: flex;
+    color: rgba(0, 0, 0);
+    font-size: 18px;
+    line-height: 30px;
+    transition: .4s;
+    padding: 15px;
+    font-weight: 600;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .stonex-tab-icon {
+    margin-left: 10px;
+    color: rgba(0, 0, 0);
+  }
+  
+  .stonex--tab-menu ul li:last-stonex {
+    margin-bottom: 0px !important;
+  }
+  
+  .stonex--tab-menu ul li.current,
+  .stonex--tab-menu ul li:hover {
+    color: #2B59FF;
+    border-radius: 10px;
+  }
+  
+  .stonex--tab-menu ul li.current .stonex-tab-icon,
+  .stonex--tab-menu ul li:hover .stonex-tab-icon {
+    color: #FF5722;
+    transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+  }
+  
+  .stonex-tab-icon {
+    margin-left: 10px;
+  }
+  
+  .stonex--tab-content h2 {
+    font-size: 60px;
+    line-height: 1.1;
+    color: rgba(0, 0, 0);
+    margin-bottom: 60px;
+    font-weight: 400;
+    letter-spacing: -2px;
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  .stonex--tab-content h3 {
+    color: #000;
+    font-weight: 600;
+    line-height: 34px;
+    font-size: 21px;
+    margin-bottom: 23px;
+  }
+  
+  .stonex--tab-content p {
+    font-size: 18px;
+    line-height: 30px;
+    color: rgba(0, 0, 0);
+    margin-bottom: 0px;
+  }
+  
+  /* style two */
+  .style-two.stonex--tab-menu ul li {
+    margin: 0;
+  }
+  
+  .stonex--tab-menu.style-two ul {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #8650E1;
+  }
+  
+  .stonex--tab-menu.style-two ul li {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    border-radius: 0;
+  }
+  
+  .stonex--tab-menu.style-two ul li.current,
+  .stonex--tab-menu.style-two ul li:hover {
+    color: #F166;
+  }
+  
+  .stonex--tab-menu.style-two ul li.current {
+    border-bottom: 2px solid #F166;
+  }
+  
+  .stonex--tab-menu.style-two ul li {
+    border-bottom: 2px solid transparent;
+  }
+  
+  .stonex--tab-menu.style-two {
+    margin-bottom: 120px;
+  }
+  
+  .stonex-tab-big-heading h2 {
+    font-size: 58px;
+    color: #000;
+    line-height: 70px;
+    letter-spacing: -2px;
+    margin-bottom: 58px;
+  }
+  
+  .style-two .stonex--tab-content {
+    display: flex;
+    margin-bottom: 27px;
+  }
+  
+  .style-two .stonex-tab-icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: #FF8D52;
+    text-align: center;
+    border-radius: 50%;
+    color: #000;
+    font-size: 30px;
+    margin-left: 27px;
+    flex: 0 0 70px;
+  }
+  
+  .style-two .stonex-tab-icon svg {
+    max-width: 100%;
+    width: 40px;
+  }
+  
+  .stonex--tab-content:last-stonex {
+    margin-bottom: 0;
+  }
+  
+  .stonex--tab-content:last-stonex .stonex-tab-icon {
+    background: #15CDA8;
+  }
+  
+  .stonex--tab-content .stonex-icon-content h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+    line-height: 34px;
+    font-weight: 600;
+  }
+  
+  .stonex-icon-content p {
+    font-size: 16px;
+  }
+  
+  .stonex-tab-content-iconbox {
+    margin: 0px 50px;
+  }
+  
+  .style-two .stonex-icon-content {
+    flex: 0 0 64%;
+  }
+  
+  
+  /*---------------------------------------------------
+  TAB
+  ----------------------------------------------------*/
+  .fbt-tab-content-single {
+    display: none;
+  }
+  
+  .stonex-tab-content-single.current {
+    display: block;
+    position: relative;
+  }
+  
+  .stonex--tab-menu ul.tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 856px;
+    border-bottom: 2px solid rgb(0 28 128 / 20%);
+    flex-wrap: wrap;
+  }
+  
+  .stonex--tab-menu ul.tabs>li {
+    display: inline-flex;
+    font-style: normal;
+    font-weight: 1.3;
+    font-size: 20px;
+    color: #2B59FF;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .stonex--tab-menu ul.tabs>li .stonex-tab-icon {
+    margin-left: 8px;
+    font-size: 18px;
+    width: 18px;
+  }
+  
+  .stonex--tab-menu {
+    text-align: center;
+  }
+  
+  .stonex--tab-menu ul.tabs>li.current {
+    border-color: #ddd;
+    color: #000;
+  }
+  
+  .stonex-elm-edit-popup .mfp-content {
+    max-width: 80vw;
+    max-height: 80vh;
+  }
+  
+  .stonex-elm-edit-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid #ffa500d9;
+    transition: .3s;
+  }
+  
+  a.stonex-elm-edit {
+    transform: translatey(-100%);
+    background: #ffa500d9;
+    color: #fff;
+    padding: 0 13px;
+  }
+  
+  .toggle-password {
+    cursor: pointer;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: rgba(73, 100, 136, 0.5);
+  }
+  
+  
+  /* ======= Brand Slider Carousel Indicator styles */
+  ul.brand-slick-slide-dot-list {
+    display: flex;
+  }
+  
+  ul.brand-slick-slide-dot-list li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 8px;
+    height: 8px;
+    background: #432CF3;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  ul.brand-slick-slide-dot-list li button {
+    display: none;
+  }
+  
+  ul.brand-slick-slide-dot-list li.slick-active {
+    transition: 0.5s;
+  }
+  
+  /* sticky header css  */
+  .sticky-wrapper {
+    width: 100%;
+  }
+  
+  .sticky-wrapper.is-sticky>.sticky-header {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-50%);
+  
+  }
+  
+  .sticky-wrapper.is-sticky>.sticky-header.reveal-header {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    opacity: 1;
+    transform: translate(0px);
+    transition: all 0.3s;
+    background-color: #fff;
+    box-shadow: 0px 12px 24px 0px rgb(0 0 0 / 14%);
+  }
+  
+  .sticky-wrapper.is-sticky>.sticky-header.reveal-header.sticky-shadow-off {
+    box-shadow: unset;
+  }
+  
+  /* arrow */
+  .brand-slider-arrow .brand-slick-prev:before,
+  .brand-slider-arrow .brand-slick-next:before {
+    display: none;
+  }
+  
+  .brand-slider-arrow.slick-active {
+    color: #1D263A;
+  }
+  
+  .brand-slider-arrow .prev {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+  }
+  
+  .brand-slider-arrow .next {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+  }
+  
+  .brand-slider-arrow .slick-active {
+    background: #2C4BFF;
+    color: #fff;
+  }
+  
+  .brand-slider-arrow button {
+    transition: all 0.4s ease-in-out;
+    font-size: 20px;
+    color: #1D263A;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background: rgba(44, 71, 255, 0.6);
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+  }
+  
+  .brand-slider-arrow button:hover {
+    background-color: #1D263A;
+    color: #fff;
+  }
+  
+  /*---------------------------------------------------
+                          TEAM MEMBER
+  ----------------------------------------------------*/
+  
+  .stonex-left {
+    text-align: right;
+  }
+  
+  .stonex-left .stonex-team-member-thumb {
+    margin-left: auto;
+  }
+  
+  .stonex-center {
+    text-align: center;
+  }
+  
+  .stonex-center .stonex-team-member-thumb {
+    margin: 0 auto;
+  }
+  
+  .stonex-right {
+    text-align: left;
+  }
+  
+  .stonex-right .stonex-team-member-thumb {
+    margin-right: auto;
+  }
+  
+  .stonex-top-background {
+    clear: both;
+  }
+  
+  .stonex-team-item .stonex-team-member.stonex-position-left,
+  .stonex-team-item .stonex-team-member.stonex-position-right {
+    display: flex;
+  }
+  
+  .stonex-position-left .stonex-team-member-thumb {
+    width: 50%;
+  }
+  
+  .stonex-position-right .stonex-team-member-thumb {
+    width: 50%;
+    order: 2;
+  }
+  
+  .stonex-position-right .stonex-team-member-content {
+    order: 1;
+  }
+  
+  .stonex-team-item .stonex-team-member.stonex-position-left .stonex-team-member-thumb img,
+  .stonex-team-item .stonex-team-member.stonex-position-right .stonex-team-member-thumb img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .stonex-team-member-thumb {
+    overflow: hidden;
+  }
+  
+  .elementor .stonex-team-member-thumb img {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+  }
+  
+  .stonex-team-member-cta {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .stonex-team-member-social {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .stonex-team-member-social li {
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .stonex-team-member-social li a {
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .stonex-team-member-social li a i {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+  
+  .stonex-team-member-thumb img {
+    display: block;
+    object-fit: cover;
+    -o-object-fit: cover;
+  }
+  
+  .stonex-team-member-name {
+    margin: 0 0 20px 0;
+  }
+  
+  .stonex-team-member-designation {
+    margin: 0 0 20px 0;
+    display: block;
+  }
+  
+  .stonex-team-member-about {
+    margin: 0 0 20px 0;
+    line-height: 1.5em;
+  }
+  
+  .stonex-team-item.style-one {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stonex-team-item.style-one .stonex-team-member-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(0deg, #07070E 100%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 0px 0px 15px 15px !important;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(140px);
+  }
+  
+  .stonex-team-item.style-one:hover .stonex-team-member-content {
+    transform: translateY(0);
+  }
+  
+  /***************************************
+    TOP RIGHT META
+  *****************************************/
+  .stonex-woocommer-top-righ-wraper ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: end;
+  }
+  
+  .stonex-woocommer-top-righ-wraper ul li a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .stonex-woocommer-top-righ-wraper ul li a span {
+    background-color: #222;
+    color: #fff;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    transform: translate(-25px, 9px);
+    -webkit-transform: translate(-25px, 9px);
+    -moz-transform: translate(-25px, 9px);
+    -ms-transform: translate(-25px, 9px);
+    -o-transform: translate(-25px, 9px);
+  }
+  
+  .stonex-woocommer-top-righ-wraper ul li a svg path {
+    stroke: transparent !important;
+  }
+  
+  .elementor-button {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .quote-single-filed {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .quote-form-wrapper {
+    margin-right: -10px;
+    margin-left: -10px;
+  
+  }
+  
+  .style-five .stonex-testimonial__meta-content {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .style-five .testimonial-content {
+    width: 60%;
+  }
+  
+  .style-five .user-image {
+    width: 40%;
+  }
+  
+  .style-five .user-identity {
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .style-one .testimonial-image-wrapper {
+  
+    justify-content: space-between;
+  
+  }
+  
+  .quote-form-wrapper .wpcf7-spinner {
+  
+    display: none;
+  
+  }
+  
+  
+  
+  @media only screen and (max-width: 768px) {
+  
+    .style-one .testimonial-image-wrapper {
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: flex-start;
+  
+    }
+  
+  }
+  
+  @media only screen and (max-width: 767px) {
+  
+    .style-five .stonex-testimonial__meta-content {
+      flex-wrap: wrap;
+    }
+  
+    .style-five .user-image {
+      width: 100%;
+    }
+  
+    .style-five .testimonial-content {
+      width: 100%;
+    }
+  
+    .style-one .testimonial-image-wrapper {
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: flex-start;
+  
+    }
+  
+  }
+  
+  /***************************************
+        responsive
+  *****************************************/
+  @media only screen and (max-width:1024px) {
+    .stonex-main-menu-wrap .navbar-inner {
+      display: block;
+    }
+  
+    .stonex-team-item .stonex-team-member.stonex-position-left,
+    .stonex-team-item .stonex-team-member.stonex-position-right {
+      flex-wrap: wrap;
+    }
+  
+    .stonex-position-left .stonex-team-member-thumb {
+      width: 100%;
+    }
+  
+    .sticky-wrapper.is-sticky>.sticky-header.reveal-header.sticky-mobile-off {
+      position: relative;
+    }
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .testimonial-wrapper {
+      display: block;
+    }
+  
+    .testimonial-image-wrapper {
+      width: 100%;
+    }
+  
+    .testimonial-content-wrapper {
+      width: 100%;
+    }
+  
+    .testimonial-two-top-meta.d-flex {
+      display: initial;
+    }
+  
+    .testimonial-two-top-meta .right-content {
+      margin-right: 0;
+      margin-top: 20px;
+    }
+  
+    .stonex-team-item .stonex-team-member.stonex-position-left,
+    .stonex-team-item .stonex-team-member.stonex-position-right {
+      flex-wrap: wrap;
+    }
+  
+    .stonex-position-left .stonex-team-member-thumb {
+      width: 100%;
+    }
+  }
