@@ -1375,7 +1375,7 @@ class STONEX_Icon_Box extends Widget_Base
 							'<%1$s %2$s>%3$s</%1$s>',
 							tag_escape($settings['title_tag']),
 							$this->get_render_attribute_string('title'),
-							scalo_kses_basic($settings['title'])
+							keystonex_kses_basic($settings['title'])
 						); ?>
 					<?php endif; ?>
 

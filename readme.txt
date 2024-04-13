@@ -7,7 +7,7 @@ Tested up to: 5.9
 Requires PHP: 5.6
 License: GPl V2
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
-Stable tag: 1.2
+Stable tag: 1.0.1
 
 
 == Description ==
@@ -40,6 +40,6 @@ Keystone Base For Elementor Helper Plugin
 == Installation ==
 Installation is fairly straight forward. Install it from the WordPress plugin repository. 
 
-= 1.2 =
+= 1.0.0 =
 * Initial Release
 

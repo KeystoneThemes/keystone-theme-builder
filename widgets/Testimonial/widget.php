@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Scalo Testimonial Normal Widget.
+ * KeystoneX Testimonial Normal Widget.
  *
  *
  * @since 1.0.0
@@ -1696,7 +1696,7 @@ Arrow Position
                     ],
                 ],
                 'selectors'      => [
-                    '{{WRAPPER}} .scalo-addons-post-widget-wrap' => 'padding-right: {{SIZE}}{{UNIT}}; padding-left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .keystonex-addons-post-widget-wrap' => 'padding-right: {{SIZE}}{{UNIT}}; padding-left: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .row' => 'margin-right: -{{SIZE}}{{UNIT}};margin-left: -{{SIZE}}{{UNIT}};',
                 ],
             ]
@@ -1715,7 +1715,7 @@ Arrow Position
                     ],
                 ],
                 'selectors'      => [
-                    '{{WRAPPER}} .scalo-addons-post-widget-wrap' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .keystonex-addons-post-widget-wrap' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .stonex-testimonial' => 'margin-bottom: -{{SIZE}}{{UNIT}};',
                 ],
             ]
@@ -2485,7 +2485,7 @@ Arrow Position
             $grid_classes[] = 'col-md-' . $settings['per_line_tablet'];
             $grid_classes[] = 'col-sm-' . $settings['per_line_mobile'];
             $grid_classes = implode(' ', $grid_classes);
-            $this->add_render_attribute('tn_classes', 'class', [$grid_classes, 'scalo-addons-post-widget-wrap']);
+            $this->add_render_attribute('tn_classes', 'class', [$grid_classes, 'keystonex-addons-post-widget-wrap']);
         }
 
 ?>

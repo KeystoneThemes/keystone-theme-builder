@@ -1636,7 +1636,7 @@ class STONEX_Accordion extends Widget_Base {
                             echo '</div>';
                         endif;
 						printf( '<%1$s %2$s>%3$s</%1$s>',tag_escape( $accordion['title_tag'] ),$this->get_render_attribute_string( 'stonex_accordion_heading'),
-						scalo_kses_basic( $accordion['stonex_exclusive_accordion_title'] )
+						keystonex_kses_basic( $accordion['stonex_exclusive_accordion_title'] )
 						);
 
                         if( 'yes' === $settings['stonex_exclusive_accordion_tab_title_show_active_inactive_icon'] && 'right' == $settings['icon_alignment']):

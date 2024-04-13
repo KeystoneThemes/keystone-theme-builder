@@ -640,7 +640,7 @@
             var gridMas = $('.tm-masonary');
 
             gridMas.isotope({
-                itemSelector: '.scalo-addons-post-widget-wrap',
+                itemSelector: '.keystonex-addons-post-widget-wrap',
                 percentPosition: true,
                 layoutMode: 'packery',
             }).resize();

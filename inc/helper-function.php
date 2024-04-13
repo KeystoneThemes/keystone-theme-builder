@@ -135,11 +135,11 @@ function stonex_cpt_slug_and_id( $post_type ) {
  * Strip all the tags except allowed html tags
  */
 
-function scalo_kses_basic( $string = '' ) {
-	return wp_kses( $string, scalo_get_allowed_html_tags( 'basic' ) );
+function keystonex_kses_basic( $string = '' ) {
+	return wp_kses( $string, keystonex_get_allowed_html_tags( 'basic' ) );
 }
 
-function scalo_get_allowed_html_tags( $level = 'basic' ) {
+function keystonex_get_allowed_html_tags( $level = 'basic' ) {
 	$allowed_html = [
 		'b' => [],
 		'i' => [],

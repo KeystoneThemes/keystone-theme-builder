@@ -2081,7 +2081,7 @@ Arrow Position
                     ],
                 ],
                 'selectors'      => [
-                    '{{WRAPPER}} .scalo-addons-post-widget-wrap' => 'padding-right: {{SIZE}}{{UNIT}}; padding-left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .keystonex-addons-post-widget-wrap' => 'padding-right: {{SIZE}}{{UNIT}}; padding-left: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .row' => 'margin-right: -{{SIZE}}{{UNIT}};margin-left: -{{SIZE}}{{UNIT}};',
                 ],
             ]
@@ -2100,7 +2100,7 @@ Arrow Position
                     ],
                 ],
                 'selectors'      => [
-                    '{{WRAPPER}} .scalo-addons-post-widget-wrap' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .keystonex-addons-post-widget-wrap' => 'margin-bottom: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .stonex-testimonial' => 'margin-bottom: -{{SIZE}}{{UNIT}};',
                 ],
             ]
