@@ -3,7 +3,7 @@
 Plugin Name: Keystone Theme Builder
 Plugin URI: https://keystonethemes.com/
 Description: The Keystone Builder is an Elementor addon that allows the user to create custom header and footer without Elementor pro and it comes with premium custom widgets.
-Version: 1.2
+Version: 1.3
 Author: Keystone Themes
 Author URI: https://themeforest.com/user/grayic/
 License: GPLv2 or later
