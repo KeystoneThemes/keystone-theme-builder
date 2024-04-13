@@ -40,6 +40,6 @@ Keystone Base For Elementor Helper Plugin
 == Installation ==
 Installation is fairly straight forward. Install it from the WordPress plugin repository. 
 
-= 1.0.1 =
+= 1.0.0 =
 * Initial Release
 
