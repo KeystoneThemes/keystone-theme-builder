@@ -100,43 +100,35 @@ if (!class_exists('KeystoneCoreUpdateChecker')) {
 
         public function request()
         {
-
             $remote = get_transient($this->cache_key);
 
             if (false === $remote || !$this->cache_allowed) {
 
-                $remote = wp_remote_get(
-                    'https://updates.keystonethemes.com/plugins/?action=get_metadata&slug=keystone-core',
+                $response = wp_remote_get(
+                    'https://api.github.com/repos/KeystoneThemes/keystone-theme-builder/releases/latest',
                     array(
                         'timeout' => 10,
                         'headers' => array(
                             'Accept' => 'application/json',
+                            'User-Agent' => 'WordPress/' . get_bloginfo('version') . '; ' . get_bloginfo('url'),
                         ),
                     )
                 );
 
-                if (
-                    is_wp_error($remote)
-                    || 200 !== wp_remote_retrieve_response_code($remote)
-                    || empty(wp_remote_retrieve_body($remote))
-                ) {
+                if (is_wp_error($response) || 200 !== wp_remote_retrieve_response_code($response)) {
                     return false;
                 }
 
+                $remote = json_decode(wp_remote_retrieve_body($response));
+
                 set_transient($this->cache_key, $remote, DAY_IN_SECONDS);
             }
-
-            $remote = json_decode(wp_remote_retrieve_body($remote));
 
             return $remote;
         }
 
         function info($res, $action, $args)
         {
-
-            // print_r( $action );
-            // print_r( $args );
-
             // do nothing if you're not getting plugin information right now
             if ('plugin_information' !== $action) {
                 return $res;
@@ -156,51 +148,38 @@ if (!class_exists('KeystoneCoreUpdateChecker')) {
 
             $res = new stdClass();
 
-            $res->name    = $remote->name;
-            $res->slug    = $remote->slug;
-            $res->version = $remote->version;
-
-            $res->author          = $remote->author;
-            $res->author_homepage = $remote->author_homepage;
-            $res->download_link   = $remote->download_url;
-            $res->trunk           = $remote->download_url;
-            $res->last_updated    = $remote->last_updated;
+            $res->name           = 'Keystone Theme Builder';
+            $res->slug           = $this->plugin_slug;
+            $res->version        = $remote->tag_name;
+            $res->author         = 'Keystone Themes';
+            $res->author_homepage= 'https://github.com/KeystoneThemes';
+            $res->download_link  = $remote->zipball_url;
+            $res->trunk          = $remote->zipball_url;
+            $res->last_updated   = $remote->published_at;
 
             $res->sections = array(
-                'description'  => '',
+                'description'  => $remote->body,
                 'installation' => '',
                 'changelog'    => '',
             );
-
-            if (!empty($remote->banners)) {
-                $res->banners = array(
-                    'low'  => '',
-                    'high' => '',
-                );
-            }
 
             return $res;
         }
 
         public function update($transient)
         {
-
             if (empty($transient->checked)) {
                 return $transient;
             }
 
             $remote = $this->request();
 
-            if (
-                $remote
-                && version_compare($this->version, $remote->version, '<')
-            ) {
-                $res              = new stdClass();
-                $res->slug        = $this->plugin_slug;
-                $res->plugin      = plugin_basename(__FILE__); // scalo-update-plugin/scalo-update-plugin.php
-                $res->new_version = $remote->version;
-                $res->package     = $remote->download_url;
-
+            if ($remote && version_compare($this->version, $remote->tag_name, '<')) {
+                $res                    = new stdClass();
+                $res->slug              = $this->plugin_slug;
+                $res->plugin            = plugin_basename(__FILE__);
+                $res->new_version       = $remote->tag_name;
+                $res->package           = $remote->zipball_url;
                 $transient->response[$res->plugin] = $res;
             }
 
@@ -209,7 +188,6 @@ if (!class_exists('KeystoneCoreUpdateChecker')) {
 
         public function purge($upgrader, $options)
         {
-
             if (
                 $this->cache_allowed
                 && 'update' === $options['action']
