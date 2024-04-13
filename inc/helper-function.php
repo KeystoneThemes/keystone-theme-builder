@@ -14,7 +14,7 @@
  */
 add_filter('woocommerce_add_to_cart_fragments', 'stor_woocommerce_header_add_to_cart_fragment');
 
-function stor_woocommerce_header_add_to_cart_fragment($fragments)
+function keystone_store_woocommerce_header_add_to_cart_fragment($fragments)
 {
 
     ob_start();

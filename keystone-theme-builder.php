@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Keystone Theme Builder
-Plugin URI: https://keystonethemes.com/
+Plugin URI: https://keystonethemes.com/plugins/keystone-theme-builder/
 Description: The Keystone Builder is an Elementor addon that allows the user to create custom header and footer without Elementor pro and it comes with premium custom widgets.
-Version: 1.0.1
+Version: 1.0.0
 Author: Keystone Themes
-Author URI: https://themeforest.com/user/grayic/
+Author URI: https://keystonethemes.com
 License: GPLv2 or later
 Text Domain: stonex
  */
@@ -66,32 +66,5 @@ require_once STONEX_WIDGET_INC . 'Icon.php';
 
 require_once STONEX_WIDGET . 'base.php';
 
-if ( ! class_exists( 'GitHub_Plugin_Updater' ) ) {
-    require_once( plugin_dir_path( __FILE__ ) . 'github-updater.php' );
-}
-
-$github_updater = new GitHub_Plugin_Updater( __FILE__ );
-$github_updater->set_username( 'KeystoneThemes' );
-$github_updater->set_repository( 'keystone-theme-builder' );
-
-
-// Add "Check for updates" link to plugin action links
-if ( is_admin() ) {
-    $plugin_basename = plugin_basename( __FILE__ );
-    add_filter( "plugin_action_links_$plugin_basename", 'add_plugin_action_links' );
-}
-
-function add_plugin_action_links( $links ) {
-    $settings_link = '<a href="options-general.php?page=github-updater">' . __( 'Settings' ) . '</a>';
-    $check_update_link = '<a href="' . wp_nonce_url( admin_url( 'admin-post.php?action=check_plugin_update' ), 'check_plugin_update' ) . '">' . __( 'Check for updates' ) . '</a>';
-    array_push( $links, $settings_link, $check_update_link );
-    return $links;
-}
-
-// Handle checking for updates
-add_action( 'admin_post_check_plugin_update', 'check_plugin_update' );
-
-function check_plugin_update() {
-    echo "Checking for updates...";
-    exit;
-}
+// Update
+//require_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
